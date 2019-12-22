@@ -11,18 +11,168 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
+<script type="text/javascript">
+    function getCurrentDateTime() {
+        const currentTime = new Date();
+        const currentOffset = currentTime.getTimezoneOffset();
+        const ISTOffset = 330; // IST offset UTC +5:30 
+        const ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentOffset) * 60000);
+        return new Date(ISTTime).getTime();
+    };
+
+    function getDateTimeIST(dateTime) {
+        const currentTime = new Date(dateTime);
+        const currentOffset = currentTime.getTimezoneOffset();
+        const ISTOffset = 330; // IST offset UTC +5:30 
+        const ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentOffset) * 60000);
+        return new Date(ISTTime).getTime();
+    };
+
+    function monthDiff() {
+        const expStart = '2017-01-11T00:00:00.000Z';
+        const d1 = new Date(getDateTimeIST(expStart));
+        const d2 = new Date(getCurrentDateTime());
+        let years = new Date(d2).getFullYear() - new Date(d1).getFullYear();
+        let months = new Date(d2).getMonth() - new Date(d1).getMonth();
+        let days = new Date(d2).getDate() - new Date(d1).getDate();
+        return `${years} years, ${months} months, ${days} days`;
+    }
+
+    function go() {
+        document.write(`${monthDiff()}`);
+    }
+</script>
+
 <body>
 
     <div class="jumbotron text-center">
         <h1>Ashish Kumar Satyam</h1>
-        <p>Senoir Engineering Analyst</p>
-        <p>Mobile App Developer</p>
+        <p>
+            <button type="button" class="btn btn-danger">
+                Senoir Engineering Analyst
+            </button>
+            <p>
+                <span class="badge badge-default">
+                    <script>
+                        go();
+                    </script>
+                </span>
+            </p>
+        </p>
+        <p>
+            <span class="badge badge-success">
+                Qualtech Consultants Pvt. Ltd.
+            </span>
+        </p>
+        <p>
+            <span class="badge badge-info">
+                B-76, B Block Rd, B Block, Sector 65, Noida, Uttar Pradesh 201307
+            </span>
+        </p>
     </div>
 
     <div class="container">
-        <h1>Ashish Kumar Satyam</h1>
-        <p>Senoir Engineering Analyst</p>
-        <p>Mobile App Developer</p>
+        <h2>Education</h2>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>
+                            Lovely Professional University,
+                        </p>
+                        <p>
+                            Phagwara, Jalandhar,
+                        </p>
+                        <p>
+                            Punjab (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Master of Computer Applications.
+                        </p>
+                        <p>
+                            Successfully Completed with Mobile and Web Application Development.
+                        </p>
+                        <p>
+                            Percentage : 72%
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            B.R.A Bihar University,
+                        </p>
+                        <p>
+                            Muzaffarpur,
+                        </p>
+                        <p>
+                            Bihar (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Bachelor of Computer Applications.
+                        </p>
+                        <p>
+                            Successfully Completed from R.N. College, Hajipur, Vaishali.
+                        </p>
+                        <p>
+                            Percentage : 72%
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            R.P.S College,
+                        </p>
+                        <p>
+                            Chakeyaj, Mahnar, Vaishali
+                        </p>
+                        <p>
+                            Bihar (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Senior Secondary School.
+                        </p>
+                        <p>
+                            Successfully Completed with Science and Mathematics
+                        </p>
+                        <p>
+                            Percentage : 60%
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Sahyogi High School,
+                        </p>
+                        <p>
+                            Hajipur, Vaishali
+                        </p>
+                        <p>
+                            Bihar (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Higher Secondary School.
+                        </p>
+                        <p>
+                            Successfully Completed under Bihar School Examination Borad, Patna
+                        </p>
+                        <p>
+                            Percentage : 61%
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
