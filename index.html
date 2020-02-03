@@ -35,8 +35,7 @@
         const d2 = new Date(getCurrentDateTime());
         let years = new Date(d2).getFullYear() - new Date(d1).getFullYear();
         let months = new Date(d2).getMonth() - new Date(d1).getMonth();
-        let days = new Date(d2).getDate() - new Date(d1).getDate();
-        return `${years} years, ${months} months, ${days} days`;
+        return `${years} years, ${months} months`;
     }
 
     function go() {
