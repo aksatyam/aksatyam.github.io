@@ -1,0 +1,163 @@
+body {
+    font-family: adobe-clean, sans-serif !important;
+}
+
+.header-v2 {
+    background-color: #1b3a72 !important;
+}
+
+.header-v2-top-left-text {
+    color: #ffffff !important;
+}
+
+.hsl-bubble-text {
+    padding: 12px !important;
+    /* background-color: #f7f8f9 !important; */
+    /* background-color: #f7f8f9 !important; */
+    border: 5px !important;
+}
+
+/* .hsl-bubble-text.v2{
+font-family: adobe-clean, sans-serif !important;
+} */
+
+.hsl-button {
+    background-color: #eaeaea !important;
+    border: none !important;
+}
+
+.hsl-actionables {
+    padding: 12px !important;
+}
+
+.hsl-actionable {
+    padding: 12px !important;
+    margin-bottom: 8px !important;
+    border-radius: 5px !important;
+    border-bottom: none !important;
+}
+
+.hsl-actionable-text.v2 {
+    color: #000 !important;
+}
+
+/* .message-section-message-bubble .hsl-bubble-text.v2 {
+    background-color: red !important;
+    } */
+    .message-section-message-row.from-user .hsl-bubble-text.v2 {
+    background-color: #143A72 !important;
+    padding: 16px ;
+    border-radius: 16px 16px 0 16px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.message-section-message-row.from-business .hsl-bubble-text.v2 {
+    background-color: #EBEDF0 !important;
+    padding: 16px ;
+    border-radius: 0 16px 16px 16px;
+    font-size: 16px;
+    color: #171A21;
+    /* font-weight: bold; */
+}
+
+.message-section-message-row.from-business .hsl-button.message-section-message-button {
+    background-color: #EBEDF0 !important;
+    padding: 16px ;
+    border-radius: 0 16px 16px 16px;
+    font-size: 16px;
+    color: #171A21;
+    /* font-weight: bold; */
+}
+
+.taskbox-new-CTA-text,
+.task-new-title {
+    color: #171A21 !important;
+}
+
+.taskbox-new-CTA {
+    --primary-color: #171A21 !important;
+    background: url(https://haptikappimg.haptikapi.com/uploads/32ff85ec8c44c7a6aeeb336234d73232.png?w=20&h=20) no-repeat 2% 50% !important;
+}
+
+.taskbox-new-CTA.active {
+    background: url(https://haptikappimg.haptikapi.com/uploads/0affd2993bd3b02e3200d9bec9105af3.png?w=20&h=20) no-repeat 2% 50% !important
+}
+
+.taskbox-new-CTA-text {
+    padding-left: 6%;
+}
+
+.hsl-actionable:first-child {
+    border-top: none;
+}
+
+.quick-reply-option {
+    background-color: white !important;
+    border: 1px solid #000080 !important;
+    box-shadow: none !important;
+    border-radius: 15px !important;
+}
+
+.quick-reply-option-text {
+    color: #000080 !important;
+}
+
+.composerv2-text-area.v2 {
+    background-color: #ffffff !important;
+    padding: 8px !important;
+    /* color: #dcdfe5 !important; */
+}
+
+.composerv2-text-area.v2::placeholder {
+    color: #dcdfe5 !important;
+}
+
+.composerv2.v2 {
+    padding: 16px 10px 16px 12px;
+    border-radius: 0px !important;
+    border: none !important;
+    background-color: #ffffff !important;
+}
+
+.composerv2.v2:hover {
+    padding: 16px 10px 16px 12px;
+    border-radius: 0px !important;
+    border: none !important;
+    background-color: #ffffff !important;
+}
+
+.composerv2-wrapper.v2 {
+    background-color: #ffffff !important;
+    border-top: 2px solid #dcdfe5 !important;
+}
+
+.message-section-area {
+    background-image: none !important;
+}
+
+.taskbox-new-body.active {
+    max-height: 245px !important;
+    overflow: hidden;
+  }
+  
+  .taskbox-new-tasks {
+    overflow: scroll;
+    max-height: 245px !important;
+  }
+  
+  .taskbox-new-tasks::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+  }
+  
+  .taskbox-new-tasks::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+
+/* .taskbox-new-CTA{
+    background: url(https://haptikappimg.haptikapi.com/uploads/32ff85ec8c44c7a6aeeb336234d73232.png?w=20&h=20) no-repeat 2% 50% !important
+  } */
