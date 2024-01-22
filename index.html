@@ -1,122 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Haptik JS SDK Integration Demo</title>
-  <meta charset="UTF-8" />
-  <meta content="width=device-width; initial-scale=1.0;" name="viewport" />
+    <title>Ashish Kumar Satyam</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
-
-<body>
-  Ely Bot Initialization
-  <script>
-    var environment = false;
-    // var ssoid = findGetParameter('ssoid');
-    // var token = findGetParameter('token');
-    // var permission = findGetParameter('permission');
-    // var botlist = findGetParameter('botlist');
-    // var userType = findGetParameter('userType');
-
-    // file:///Users/satyam/Desktop/index.html?ssoid=amhom2446&token=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhbWhvbTI0NDYiLCJpYXQiOjE3MDMyMDQwODksInN1YiI6ImFtaG9tMjQ0NiIsImlzcyI6IkFtYXJqaXQuTWFoYWRpa0BtYXhsaWZlaW5zdXJhbmNlLmNvbSIsImV4cCI6MTcwMzIxMTI4OX0.kzE2PlQUSy8lrbeegs2iXtDqWBHR--RCWWvchopVUyY&otlist=misbot_validated_key_bot_2017,hrbot_validated_key_bot_2017,N,N,N&userType=mnylEmployee
-
-    var ssoid = 'amhom2446';
-    var token = 'eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhbWhvbTI0NDYiLCJpYXQiOjE3MDMyMDQwODksInN1YiI6ImFtaG9tMjQ0NiIsImlzcyI6IkFtYXJqaXQuTWFoYWRpa0BtYXhsaWZlaW5zdXJhbmNlLmNvbSIsImV4cCI6MTcwMzIxMTI4OX0.kzE2PlQUSy8lrbeegs2iXtDqWBHR--RCWWvchopVUyY';
-    var permission = ['CET', 'LW'];
-    var botlist = 'misbot_validated_key_bot_2017,hrbot_validated_key_bot_2017,N,N,N';
-    var userType = 'mnylEmployee';
-
-    window.haptikInitSettings = {
-      "business-id": getBusinessId(environment),
-      "client-id": getClientId(environment),
-      "base-url": getBaseURL(environment),
-      'signup-type': 'third_party',
-      'ignore-storage': true,
-      "custom-css": "haptik.css",
-      "botEvents": event => {
-        console.log(JSON.stringify(event));
-        if (event.event_name == "HAPTIK_BUTTON_CLICKED") {
-          if (event.data.type == "LINK") {
-            let url = event.data.value.url
-            const uatProdURL = this.redirectionService.getTestMode() ? 'https://d3fcreaysfudlb.cloudfront.net/index_uat.html' : 'https://d3fcreaysfudlb.cloudfront.net/index.html';
-            if (url.indexOf(uatProdURL) > -1) {
-              // Launch MSD Bot
-
-            }
-            else {
-              // Download File
-            }
-          }
-        }
-      },
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function getCurrentDateTime() {
+        const currentTime = new Date();
+        const currentOffset = currentTime.getTimezoneOffset();
+        const ISTOffset = 330; // IST offset UTC +5:30 
+        const ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentOffset) * 60000);
+        return new Date(ISTTime).getTime();
     };
 
-    function findGetParameter(parameterName) {
-      var result = null,
-        tmp = [];
-      location.search
-        .substr(1)
-        .split("&")
-        .forEach(function (item) {
-          tmp = item.split("=");
-          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-        });
-      return result;
+    function getDateTimeIST(dateTime) {
+        const currentTime = new Date(dateTime);
+        const currentOffset = currentTime.getTimezoneOffset();
+        const ISTOffset = 330; // IST offset UTC +5:30 
+        const ISTTime = new Date(currentTime.getTime() + (ISTOffset + currentOffset) * 60000);
+        return new Date(ISTTime).getTime();
+    };
+
+    function monthDiff() {
+        const expStart = '2017-01-11T00:00:00.000Z';
+        const d1 = new Date(getDateTimeIST(expStart));
+        const d2 = new Date(getCurrentDateTime());
+        let years = new Date(d2).getFullYear() - new Date(d1).getFullYear();
+        let months = new Date(d2).getMonth() - new Date(d1).getMonth();
+        return `${years} years, ${months} months`;
     }
 
-    function getBusinessId(environment) {
-      return environment ? "5417" : "5417";
+    function go() {
+        document.write(`${monthDiff()}`);
     }
+</script>
 
-    function getClientId(environment) {
-      return environment ? "0d981d7da886e15be52654158ba5e64fe201ae52" : "0f699038facd3e065b5c9319cd64b49507dd71e1";
-    }
+<body>
+    <div class="jumbotron text-left">
+        <div class="container">
+            <h1>Ashish Kumar Satyam</h1>
+            <p>
+                <button type="button" class="btn btn-danger">
+                    Senoir Engineering Analyst
+                </button>
+                <p>
+                    <span class="badge badge-default">
+                        <script>
+                            go();
+                        </script>
+                    </span>
+                </p>
+            </p>
+            <p>
+                <span class="badge badge-success">
+                    Qualtech Consultants Pvt. Ltd.
+                </span>
+            </p>
+            <p>
+                <span class="badge badge-info">
+                    B-76, B Block Rd,
+                    B Block, Sector 65,
+                    Noida, Uttar Pradesh,
+                    201307
+                </span>
+            </p>
+        </div>
+    </div>
 
-    function getBaseURL(environment) {
-      return environment ? "https://staging.hellohaptik.com/" : "https://api.haptikapi.com/";
-    }
+    <div class="container">
+        <blockquote class="blockquote">
+            <p class="small">
+                To seek a competative and challanging career opportunity in IT Firm,
+                that utilizes my skills and knowledge and at the same time
+                provides challanging opportunities for learning and growth.
+            </p>
+        </blockquote>
 
-    function checkMisBotAndPermissionAccess(permission, botlist, userType) {
-      const permissionList = permission ? permission : [];
+        <h3>Education</h3>
+        <table class="table">
+            <tbody class="small">
+                <tr>
+                    <td>
+                        <p>
+                            Lovely Professional University,
+                        </p>
+                        <p>
+                            Phagwara, Jalandhar,
+                        </p>
+                        <p>
+                            Punjab (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Master of Computer Applications.
+                        </p>
+                        <p>
+                            Successfully Completed with Mobile and Web Application Development.
+                        </p>
+                        <p>
+                            Percentage : 72%
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            B.R.A Bihar University,
+                        </p>
+                        <p>
+                            Muzaffarpur,
+                        </p>
+                        <p>
+                            Bihar (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Bachelor of Computer Applications.
+                        </p>
+                        <p>
+                            Successfully Completed from R.N. College, Hajipur, Vaishali.
+                        </p>
+                        <p>
+                            Percentage : 72%
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            R.P.S College,
+                        </p>
+                        <p>
+                            Chakeyaj, Mahnar, Vaishali
+                        </p>
+                        <p>
+                            Bihar (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Senior Secondary School.
+                        </p>
+                        <p>
+                            Successfully Completed with Science and Mathematics
+                        </p>
+                        <p>
+                            Percentage : 60%
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Sahyogi High School,
+                        </p>
+                        <p>
+                            Hajipur, Vaishali
+                        </p>
+                        <p>
+                            Bihar (India).
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            Higher Secondary School.
+                        </p>
+                        <p>
+                            Successfully Completed under Bihar School Examination Borad, Patna
+                        </p>
+                        <p>
+                            Percentage : 61%
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-      let btnObj = {
-        display_mis: 'false',
-        userType,
-        permission: permissionList
-      }
-      if (/misbot_validated_key_bot_2017/i.test(botlist)) {
-        btnObj.display_mis = 'true'
-      }
-      else if (/flsbot_validated_key_bot_2017/i.test(botlist)) {
-        btnObj.display_mis = 'true'
-      }
-      else {
-        btnObj.display_mis = 'false'
-      }
-      return btnObj
-    }
-
-  </script>
-  <script type="text/javascript" charset="UTF-8" src="https://toolassets.haptikapi.com/platform/javascript-xdk/production/loader.js"></script>
-
-  <script>
-    document.addEventListener('haptik_sdk', function () {
-      var userSignUp = {
-        auth_id: ssoid,
-        auth_code: token,
-        custom_data: checkMisBotAndPermissionAccess(permission, botlist, userType)
-      }
-      HaptikSDK.signup(userSignUp, function (success, error, data) {
-        if (success) {
-          HaptikSDK.launchMessage("Menu", function () { }, true);
-          HaptikSDK.show()
-          function callbackFunction() {
-          }
-          console.log('SIGNUP REQUEST SUCCEEDED!', data);
-        } else {
-          console.log('ERROR:', error);
-        }
-      });
-    });
-  </script>
+</body>
 
 </html>
